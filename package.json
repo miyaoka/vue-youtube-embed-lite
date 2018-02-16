@@ -1,6 +1,6 @@
 {
   "name": "@miyaoka/vue-youtube-embed-lite",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Embed YouTube player without iframe for better performance",
   "main": "dist/vue-youtube-embed-lite.cjs.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "pre-prod": "npm run test && npm run build",
     "rimraf": "rimraf dist",
     "lint": "eslint --ext .js,.vue src example",
-    "publish": "npm run build && npm publish --access=public",
+    "pub": "npm run build && npm publish --access=public",
     "test": "npm run lint && tyu"
   },
   "poi": {
