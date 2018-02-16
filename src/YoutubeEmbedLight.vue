@@ -5,7 +5,14 @@
     class="ytp-container"
     :style="thumbStyle">
     <button
-      style="display:none"
+      :style="{
+        position: 'absolute',
+        left: '50%',
+        top: '50%',
+        width: '68px',
+        height: '48px',
+        transform: 'translate(-50%, -50%)'
+      }"
       class="ytp-large-play-button ytp-button"
       aria-label="play">
       <svg
@@ -88,13 +95,6 @@ iframe,
   }
 }
 .ytp-large-play-button {
-  display: block !important;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 68px;
-  height: 48px;
-  transform: translate(-50%, -50%);
   transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
   z-index: 63;
 }
