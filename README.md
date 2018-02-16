@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/@miyaoka/vue-youtube-embed-light.svg?style=flat)](https://npmjs.com/package/@miyaoka/vue-youtube-embed-light) [![NPM downloads](https://img.shields.io/npm/dm/@miyaoka/vue-youtube-embed-light.svg?style=flat)](https://npmjs.com/package/@miyaoka/vue-youtube-embed-light) [![CircleCI](https://circleci.com/gh/miyaoka/vue-youtube-embed-light.svg?style=shield)](https://circleci.com/gh/miyaoka/vue-youtube-embed-light)
 
-> Touch extension of input-range element
+> Display YouTube thumbnail only instead of iframe for better loading performance.
 
 Demo: https://miyaoka.github.io/vue-youtube-embed-light/
 
@@ -14,9 +14,16 @@ npm i @miyaoka/vue-youtube-embed-light
 
 ## Usage
 
-### in script
+```vue
+<template>
+  <YoutubeEmbedLight
+    vid="M7lc1UVf-VE"
+    thumb-quality="hq"
+    :params="{start: 100}"
+  />
+</template>
 
-```js
+<script>
 import YoutubeEmbedLight from '@miyaoka/vue-youtube-embed-light'
 
 export default {
@@ -24,16 +31,5 @@ export default {
     YoutubeEmbedLight
   }
 }
-```
-
-### in template
-
-```
-<YoutubeEmbedLight
-  :min="min"
-  :max="max"
-  :step="step"
-  :disabled="disabled"
-  v-model="value"
-/>
+</script>
 ```
