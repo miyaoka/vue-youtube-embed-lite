@@ -5,6 +5,22 @@
     class="ytp-container"
     :style="thumbStyle">
     <button
+      :style="{
+        position: 'absolute',
+        left: '50%',
+        top: '50%',
+        width: '68px',
+        height: '48px',
+        transform: 'translate(-50%, -50%)',
+        transition: 'opacity 0.25s cubic-bezier(0, 0, 0.2, 1)',
+        'z-index': '63',
+        border: 'none',
+        'background-color': 'transparent',
+        padding: '0',
+        'font-size': '100%',
+        cursor: 'inherit',
+        outline: '0'
+      }"
       aria-label="play">
       <svg
         height="100%"
@@ -43,6 +59,7 @@ export default {
   },
   data() {
     return {
+      isClicked: false
     }
   },
   computed: {
@@ -72,6 +89,7 @@ iframe,
   height: 315px;
 }
 .ytp-container {
+  overflow: hidden;
   display: inline-block;
   cursor: pointer;
   position: relative;
