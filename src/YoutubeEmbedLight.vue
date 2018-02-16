@@ -5,6 +5,7 @@
     class="ytp-container"
     :style="thumbStyle">
     <button
+      style="display:none"
       class="ytp-large-play-button ytp-button"
       aria-label="play">
       <svg
@@ -87,6 +88,7 @@ iframe,
   }
 }
 .ytp-large-play-button {
+  display: block !important;
   position: absolute;
   left: 50%;
   top: 50%;
