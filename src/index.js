@@ -1,2 +1,2 @@
-import YoutubeEmbedLight from './YoutubeEmbedLight.vue'
-export default YoutubeEmbedLight
+import YoutubeEmbedLite from './YoutubeEmbedLite.vue'
+export default YoutubeEmbedLite

@@ -4,7 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Vue YouTube embed light
+            Vue YouTube embed lite
           </h1>
           <h2 class="subtitle">
             Embed YouTube player without iframe for better performance.
@@ -21,10 +21,10 @@
           <div class="column">
             <div class="card">
               <header class="card-header">
-                <p class="card-header-title">Embed light</p>
+                <p class="card-header-title">Embed lite</p>
               </header>
               <div class="card-content">
-                <YoutubeEmbedLight
+                <YoutubeEmbedLite
                   vid="M7lc1UVf-VE"
                   thumb-quality="maxres"
                   :style="{width: '320px', height:'180px'}"
@@ -106,11 +106,11 @@
       <div class="container">
         <h2 class="title">Licence</h2>
         <div class="content">
-          <a href="https://github.com/miyaoka/vue-youtube-embed-light/blob/master/LICENSE">MIT</a>
+          <a href="https://github.com/miyaoka/vue-youtube-embed-lite/blob/master/LICENSE">MIT</a>
         </div>
         <h2 class="title">Source</h2>
         <div class="content">
-          <a href="https://github.com/miyaoka/vue-youtube-embed-light">GitHub</a>
+          <a href="https://github.com/miyaoka/vue-youtube-embed-lite">GitHub</a>
         </div>
       </div>
     </footer>
@@ -120,15 +120,15 @@
 
 <script>
 import 'bulma/css/bulma.css'
-import YoutubeEmbedLight from '../src/YoutubeEmbedLight'
+import YoutubeEmbedLite from '../src/YoutubeEmbedLite'
 
 export default {
   components: {
-    YoutubeEmbedLight
+    YoutubeEmbedLite
   },
   data() {
     return {
-      code: `<YoutubeEmbedLight
+      code: `<YoutubeEmbedLite
   vid="M7lc1UVf-VE"
   thumb-quality="hq"
   :params="{start: 100}"

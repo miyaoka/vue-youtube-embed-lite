@@ -5,8 +5,6 @@
     class="ytp-container"
     :style="thumbStyle">
     <button
-      style="display:none"
-      class="ytp-large-play-button ytp-button"
       aria-label="play">
       <svg
         height="100%"
@@ -37,7 +35,7 @@ const embedUrlBase = 'https://www.youtube.com/embed'
 const thumbUrlBase = 'https://i.ytimg.com/vi'
 
 export default {
-  name: 'YoutubeEmbedLight',
+  name: 'YoutubeEmbedLite',
   props: {
     vid: { type: String, required: true },
     thumbQuality: { type: String, default: 'mq' },
@@ -45,7 +43,6 @@ export default {
   },
   data() {
     return {
-      isClicked: false
     }
   },
   computed: {
@@ -86,24 +83,5 @@ iframe,
     fill: #f00;
     fill-opacity: 1;
   }
-}
-.ytp-large-play-button {
-  display: block !important;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 68px;
-  height: 48px;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
-  z-index: 63;
-}
-.ytp-button {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  font-size: 100%;
-  cursor: inherit;
-  outline: 0;
 }
 </style>

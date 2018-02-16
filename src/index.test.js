@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import YoutubeEmbedLight from './'
+import YoutubeEmbedLite from './'
 
 describe('Component', () => {
   test('it works', () => {
-    const wrapper = mount(YoutubeEmbedLight)
+    const wrapper = mount(YoutubeEmbedLite)
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 })

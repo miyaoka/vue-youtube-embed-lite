@@ -1,8 +1,8 @@
 {
-  "name": "@miyaoka/vue-youtube-embed-light",
+  "name": "@miyaoka/vue-youtube-embed-lite",
   "version": "1.0.4",
   "description": "Embed YouTube player without iframe for better performance",
-  "main": "dist/vue-youtube-embed-light.cjs.js",
+  "main": "dist/vue-youtube-embed-lite.cjs.js",
   "scripts": {
     "dev": "poi",
     "build": "npm run rimraf && bili",
@@ -22,7 +22,7 @@
     "format": [
       "cjs"
     ],
-    "name": "vue-youtube-embed-light",
+    "name": "vue-youtube-embed-lite",
     "plugins": [
       "vue"
     ],
@@ -35,7 +35,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miyaoka/vue-youtube-embed-light.git"
+    "url": "git+https://github.com/miyaoka/vue-youtube-embed-lite.git"
   },
   "keywords": [
     "vue",
@@ -45,9 +45,9 @@
   "author": "Masaya Kazama <miyan@t-p.jp>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/miyaoka/vue-youtube-embed-light/issues"
+    "url": "https://github.com/miyaoka/vue-youtube-embed-lite/issues"
   },
-  "homepage": "https://github.com/miyaoka/vue-youtube-embed-light#readme",
+  "homepage": "https://github.com/miyaoka/vue-youtube-embed-lite#readme",
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.11",
     "babel-eslint": "^8.2.1",
