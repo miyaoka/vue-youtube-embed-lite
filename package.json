@@ -1,0 +1,57 @@
+{
+  "name": "@miyaoka/vue-youtube-embed-light",
+  "version": "1.0.1",
+  "description": "Display YouTube thumbnail only instead of iframe for better loading performance",
+  "main": "dist/vue-youtube-embed-light.cjs.js",
+  "scripts": {
+    "dev": "poi",
+    "build": "npm run rimraf && bili",
+    "build:example": "npm run rimraf && poi build",
+    "pre-prod": "npm run test && npm run build",
+    "rimraf": "rimraf dist",
+    "lint": "eslint --ext .js,.vue src example",
+    "publish": "npm run build && npm publish --access=public",
+    "test": "npm run lint && tyu"
+  },
+  "poi": {
+    "entry": "example/index.js",
+    "dist": "dist",
+    "homepage": "./"
+  },
+  "bili": {
+    "format": ["cjs", "umd"],
+    "name": "vue-youtube-embed-light",
+    "plugins": ["vue"]
+  },
+  "files": ["dist"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miyaoka/vue-youtube-embed-light.git"
+  },
+  "keywords": ["vue", "touch", "range", "slider"],
+  "author": "Masaya Kazama <miyan@t-p.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miyaoka/vue-youtube-embed-light/issues"
+  },
+  "homepage": "https://github.com/miyaoka/vue-youtube-embed-light#readme",
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.11",
+    "bili": "^2.2.7",
+    "eslint": "^4.17.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.2.2",
+    "node-sass": "^4.7.2",
+    "parse5": "^2.2.3",
+    "poi": "^9.6.13",
+    "rimraf": "^2.6.2",
+    "rollup-plugin-vue": "^3.0.0",
+    "sass-loader": "^6.0.6",
+    "tyu": "^1.0.5"
+  }
+}
