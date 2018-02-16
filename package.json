@@ -20,13 +20,15 @@
   },
   "bili": {
     "format": [
-      "cjs",
-      "umd"
+      "cjs"
     ],
     "name": "vue-youtube-embed-light",
     "plugins": [
       "vue"
-    ]
+    ],
+    "vue":{
+      "css": true
+    }
   },
   "files": [
     "dist"
