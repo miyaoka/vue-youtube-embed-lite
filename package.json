@@ -1,7 +1,7 @@
 {
   "name": "@miyaoka/vue-youtube-embed-light",
   "version": "1.0.0",
-  "description": "Display YouTube thumbnail only instead of iframe for better loading performance",
+  "description": "Embed YouTube player without iframe for better performance",
   "main": "dist/vue-youtube-embed-light.cjs.js",
   "scripts": {
     "dev": "poi",

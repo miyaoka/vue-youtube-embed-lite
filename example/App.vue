@@ -7,7 +7,7 @@
             Vue YouTube embed light
           </h1>
           <h2 class="subtitle">
-            Display YouTube thumbnail only instead of iframe for better loading performance.
+            Embed YouTube player without iframe for better performance.
           </h2>
         </div>
       </div>
@@ -30,7 +30,7 @@
                   :style="{width: '320px', height:'180px'}"
                   :params="{start: 100}"/>
 
-                <p>Load iframe after clicking.</p>
+                <p>Display only thumbnail in init. Load iframe after clicking.</p>
               </div>
 
             </div>

@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/@miyaoka/vue-youtube-embed-light.svg?style=flat)](https://npmjs.com/package/@miyaoka/vue-youtube-embed-light) [![NPM downloads](https://img.shields.io/npm/dm/@miyaoka/vue-youtube-embed-light.svg?style=flat)](https://npmjs.com/package/@miyaoka/vue-youtube-embed-light) [![CircleCI](https://circleci.com/gh/miyaoka/vue-youtube-embed-light.svg?style=shield)](https://circleci.com/gh/miyaoka/vue-youtube-embed-light)
 
-> Display YouTube thumbnail only instead of iframe for better loading performance.
+> Embed YouTube player without iframe for better performance.
 
 Demo: https://miyaoka.github.io/vue-youtube-embed-light/
 
