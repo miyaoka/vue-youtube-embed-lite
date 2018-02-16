@@ -20,19 +20,27 @@
         <YoutubeEmbedLight
           vid="M7lc1UVf-VE"
           style="width:200px; height:100px"
-          :params="{start: 100}"
-        />
+          :params="{start: 100}"/>
 
         <YoutubeEmbedLight
           vid="M7lc1UVf-VE"
-          thumbQuality="maxres"
-        />
+          thumb-quality="maxres"/>
       </div>
       <div>
         <h3>Vanilla iframe</h3>
-        <iframe width="200" height="100" src="https://www.youtube.com/embed/M7lc1UVf-VE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe
+          width="200"
+          height="100"
+          src="https://www.youtube.com/embed/M7lc1UVf-VE"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/M7lc1UVf-VE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/M7lc1UVf-VE"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
       </div>
 
     </section>

@@ -19,16 +19,27 @@
     "homepage": "./"
   },
   "bili": {
-    "format": ["cjs", "umd"],
+    "format": [
+      "cjs",
+      "umd"
+    ],
     "name": "vue-youtube-embed-light",
-    "plugins": ["vue"]
+    "plugins": [
+      "vue"
+    ]
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miyaoka/vue-youtube-embed-light.git"
   },
-  "keywords": ["vue", "touch", "range", "slider"],
+  "keywords": [
+    "vue",
+    "youtube",
+    "embed"
+  ],
   "author": "Masaya Kazama <miyan@t-p.jp>",
   "license": "MIT",
   "bugs": {
@@ -37,17 +48,13 @@
   "homepage": "https://github.com/miyaoka/vue-youtube-embed-light#readme",
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.11",
+    "babel-eslint": "^8.2.1",
     "bili": "^2.2.7",
-    "eslint": "^4.17.0",
-    "eslint-config-standard": "^11.0.0-beta.0",
-    "eslint-plugin-html": "^4.0.2",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^6.0.0",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.2.2",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
     "node-sass": "^4.7.2",
-    "parse5": "^2.2.3",
     "poi": "^9.6.13",
     "rimraf": "^2.6.2",
     "rollup-plugin-vue": "^3.0.0",

@@ -1,14 +1,22 @@
 module.exports = {
   root: true,
-  extends: ['standard', 'plugin:vue/recommended'],
   env: {
     browser: true,
-    node: true,
-    mocha: true
+    node: true
   },
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
+  extends: [
+    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
+    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
+    'plugin:vue/strongly-recommended'
+  ],
+  // required to lint *.vue files
+  plugins: ['vue'],
   // add your custom rules here
   rules: {
-    'space-before-function-paren': ['error', 'never']
-  },
-  globals: { expect: true }
+    'space-before-function-paren': ['error', 'never'],
+    'vue/html-self-closing': ['error', { html: { normal: 'never' } }]
+  }
 }
