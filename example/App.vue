@@ -73,6 +73,7 @@
               <tr>
                 <th>name</th>
                 <th>desc</th>
+                <th>type</th>
                 <th>required</th>
                 <th>default</th>
                 <th>e.g.</th>
@@ -84,6 +85,7 @@
                 :key="prop.name">
                 <th>{{ prop.name }}</th>
                 <td>{{ prop.desc }}</td>
+                <td>{{ prop.type }}</td>
                 <td>{{ prop.required }}</td>
                 <td><code v-if="prop.default">{{ prop.default }}</code></td>
                 <td>
@@ -135,18 +137,21 @@ export default {
       propTable: [
         {
           name: 'vid',
+          type: 'String',
           required: true,
           desc: 'YouTube vidoo id',
           eg: ['M7lc1UVf-VE']
         },
         {
           name: 'thumb-quality',
+          type: 'String',
           default: 'md',
           desc: 'Thumbnail image size',
           eg: ["''", 'md', 'hq', 'sd', 'maxres']
         },
         {
           name: 'params',
+          type: 'Object',
           default: '{}',
           desc: 'Embed player params',
           eg: ['{ start: 100 }']
