@@ -60,5 +60,8 @@
     "rollup-plugin-vue": "^3.0.0",
     "sass-loader": "^6.0.6",
     "tyu": "^1.0.5"
+  },
+  "dependencies": {
+    "bulma": "^0.6.2"
   }
 }

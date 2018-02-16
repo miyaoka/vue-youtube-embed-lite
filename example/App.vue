@@ -1,79 +1,123 @@
 <template>
   <div id="app">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css">
-
-    <header>
-      <h1>
-        Vue YouTube embed light
-      </h1>
-      <p>
-        Display YouTube thumbnail only instead of iframe for better loading performance.
-      </p>
+    <header class="hero is-info is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Vue YouTube embed light
+          </h1>
+          <h2 class="subtitle">
+            Display YouTube thumbnail only instead of iframe for better loading performance.
+          </h2>
+        </div>
+      </div>
     </header>
 
-    <section>
-      <h2>Example</h2>
-      <div>
-        <h3>embed light(Display thumnail only)</h3>
-        <YoutubeEmbedLight
-          vid="M7lc1UVf-VE"
-          style="width:200px; height:100px"
-          :params="{start: 100}"/>
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Example</h2>
 
-        <YoutubeEmbedLight
-          vid="M7lc1UVf-VE"
-          thumb-quality="maxres"/>
+        <div class="columns">
+          <div class="column">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">Embed light</p>
+              </header>
+              <div class="card-content">
+                <YoutubeEmbedLight
+                  vid="M7lc1UVf-VE"
+                  thumb-quality="maxres"
+                  :style="{width: '320px', height:'180px'}"
+                  :params="{start: 100}"/>
+
+                <p>Load iframe after clicking.</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">Normal iframe</p>
+              </header>
+              <div class="card-content">
+                <iframe
+                  width="320"
+                  height="180"
+                  src="https://www.youtube.com/embed/M7lc1UVf-VE"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>Vanilla iframe</h3>
-        <iframe
-          width="200"
-          height="100"
-          src="https://www.youtube.com/embed/M7lc1UVf-VE"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen></iframe>
-
-        <iframe
-          src="https://www.youtube.com/embed/M7lc1UVf-VE"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen></iframe>
-      </div>
-
     </section>
 
-    <section>
-      <h2>Usage</h2>
-      <div>
-        <pre><code>{{ code }}</code></pre>
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Usage</h2>
+        <div class="content">
+          <pre><code>{{ code }}</code></pre>
+        </div>
       </div>
     </section>
-    <section>
-      <h2>Props</h2>
 
-      <h3>[Optional]</h3>
-      <dl>
-        <dt>value: Number</dt>
-        <dd>(default: 0)</dd>
-        <dt>min: Number</dt>
-        <dd>(default: 0)</dd>
-        <dt>max: Number</dt>
-        <dd>(default: 1)</dd>
-        <dt>step: Number | String</dt>
-        <dd>(default: any)</dd>
-        <dt>disabled: Boolean</dt>
-        <dd>(default: false)</dd>
-      </dl>
-
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Props</h2>
+        <div class="content">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>desc</th>
+                <th>required</th>
+                <th>default</th>
+                <th>e.g.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="prop in propTable"
+                :key="prop.name">
+                <th>{{ prop.name }}</th>
+                <td>{{ prop.desc }}</td>
+                <td>{{ prop.required }}</td>
+                <td><code v-if="prop.default">{{ prop.default }}</code></td>
+                <td>
+                  <span
+                    v-for="eg in prop.eg"
+                    :key="eg">
+                    <code>{{ eg }}</code>&nbsp;
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
+
+    <footer class="footer">
+      <div class="container">
+        <h2 class="title">Licence</h2>
+        <div class="content">
+          <a href="https://github.com/miyaoka/vue-youtube-embed-light/blob/master/LICENSE">MIT</a>
+        </div>
+        <h2 class="title">Source</h2>
+        <div class="content">
+          <a href="https://github.com/miyaoka/vue-youtube-embed-light">GitHub</a>
+        </div>
+      </div>
+    </footer>
 
   </div>
 </template>
 
 <script>
+import 'bulma/css/bulma.css'
 import YoutubeEmbedLight from '../src/YoutubeEmbedLight'
 
 export default {
@@ -84,29 +128,35 @@ export default {
     return {
       code: `<YoutubeEmbedLight
   vid="M7lc1UVf-VE"
-  thumbQuality="hq"
+  thumb-quality="hq"
   :params="{start: 100}"
 />
-`
+`,
+      propTable: [
+        {
+          name: 'vid',
+          required: true,
+          desc: 'YouTube vidoo id',
+          eg: ['M7lc1UVf-VE']
+        },
+        {
+          name: 'thumb-quality',
+          default: 'md',
+          desc: 'Thumbnail image size',
+          eg: ["''", 'md', 'hq', 'sd', 'maxres']
+        },
+        {
+          name: 'params',
+          default: '{}',
+          desc: 'Embed player params',
+          eg: ['{ start: 100 }']
+        }
+      ]
     }
   }
 }
 </script>
 
 <style>
-html {
-  margin: 1rem;
-}
-.slider {
-  width: 100%;
-}
-pre {
-  padding: 1rem;
-  background: #eee;
-}
-section {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 2px dotted #ccc;
-}
+
 </style>
