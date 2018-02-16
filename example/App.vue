@@ -16,7 +16,7 @@
     <section>
       <h2>Example</h2>
       <div>
-        <h3>embed light</h3>
+        <h3>embed light(Display thumnail only)</h3>
         <YoutubeEmbedLight
           vid="M7lc1UVf-VE"
           style="width:200px; height:100px"
