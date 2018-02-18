@@ -27,8 +27,8 @@
                 <YoutubeEmbedLite
                   vid="M7lc1UVf-VE"
                   thumb-quality="maxres"
-                  :style="{width: '320px', height:'180px'}"
-                  :params="{start: 100}"/>
+                  style="width: 320px"
+                  :params="{ start: 100 }"/>
 
                 <p>Display only thumbnail in init. Load iframe after clicking.</p>
               </div>
@@ -155,6 +155,13 @@ export default {
           default: '{}',
           desc: 'Embed player params',
           eg: ['{ start: 100 }']
+        },
+        {
+          name: 'aspect',
+          type: 'Number',
+          default: '0.5625',
+          desc: 'Aspect ratio',
+          eg: ['0.75']
         }
       ]
     }
