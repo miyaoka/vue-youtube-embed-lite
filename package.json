@@ -1,6 +1,6 @@
 {
   "name": "@miyaoka/vue-youtube-embed-lite",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Embed YouTube player without iframe for better performance",
   "main": "dist/vue-youtube-embed-lite.cjs.js",
   "scripts": {
